@@ -32,9 +32,10 @@ function Row({ rows }) {
           <b>{rows[0].asset_class} ({rows.length})</b>
         </TableCell>
         {rows[0].asset_class !== 'Cash' && (
-          <TableCell />
+          <>
+            <TableCell />
+          </>
         )}
-        <TableCell />
         <TableCell />
       </TableRow>
       <TableRow>
@@ -47,9 +48,10 @@ function Row({ rows }) {
                     <TableCell><b>Name of Holding</b></TableCell>
                     <TableCell><b>Ticker</b></TableCell>
                     {rows[0].asset_class !== 'Cash' && (
-                      <TableCell align="right"><b>Average Price</b></TableCell>
+                      <>
+                        <TableCell align="right"><b>Average Price</b></TableCell>
+                      </>
                     )}
-                    <TableCell align="right"><b>Market Price</b></TableCell>
                     <TableCell align="right"><b>Latest Change (%)</b></TableCell>
                     <TableCell align="right"><b>Market Value ($)</b></TableCell>
                   </TableRow>
@@ -60,9 +62,10 @@ function Row({ rows }) {
                       <TableCell>{row.name}</TableCell>
                       <TableCell>{row.ticker}</TableCell>
                       {rows[0].asset_class !== 'Cash' && (
-                        <TableCell align="right">{row.avg_price}</TableCell>
+                        <>
+                          <TableCell align="right">{row.avg_price}</TableCell>
+                        </>
                       )}
-                      <TableCell align="right">{row.market_price}</TableCell>
                       <TableCell align="right">{row.latest_chg_pct}</TableCell>
                       <TableCell align="right">{row.market_value_ccy}</TableCell>
                     </TableRow>
